@@ -27,6 +27,7 @@ html {
  
  video{
     max-width: 100%;
+    border-radius: 30px;
 }
 
 .section2{
@@ -36,6 +37,37 @@ html {
     margin-right: 100px;
 
 }
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    position: relative;
+    top: -120px;
+    width: 100%;
+    height: auto;
+    font-family:'Russo One';
+}
+
+a.projects{
+    background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+a.about{
+    background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+nav.links span {
+    margin-left: 15px;
+    margin-right: 15px;
+    color:white;
+    }
 
 .nav .title{
     font-family: 'Dancing Script', cursive;
