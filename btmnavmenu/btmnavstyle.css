@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&display=swap');
+
+
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+}
+
+:root
+{
+    --clr: #222327
+}
+
+body .btmnavmenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+@media only screen and (max-width:330px) {
+    body .btmnavmenu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    }
+    .navigation{
+        transform: scale(0.8);
+    }
+    
+}
+
+/* In caz ca nu mai vreau nav bar-ul global
+
+@media only screen and (min-width:420px) {
+   body .btmnavmenu .navigation{
+        display:none;
+    }
+    
+}  */
+
+
+
+.navigation
+{
+width: 400px;
+height: 70px;
+display: inherit;
+position:fixed;
+bottom: 0;
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.navigation ul
+{
+    display: flex;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.navigation ul li a .icon
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li a .share
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+
+.navigation ul li.active a .share
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+  position: absolute; 
+  color: #000000;
+  font: weight 900;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  
+}
+
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator
+{
+    position:absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50% ;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 6px solid black;
+transition: 0.5s;
+} 
+
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    
+
+}
+
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    
+
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(70px * 4));
+}
+
+
+
+
+.toggle li
+{
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    list-style: none;
+    transform-origin: 60px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate (0deg);
+    transform: translateX(60px);
+    /* Am adaugat opacity pentru a masca iconitele atunci cand nu sunt activate
+    Opacitate 0 in prima instanta*/
+    opacity: 0;
+    
+
+}
+
+.toggle.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+}
+
+.toggle li a
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+
+}
+
+
+.toggle {
+    transform: translateX(calc(76.5px*4));
+    padding-bottom: 19px;
+    width: 60 px;
+    height: 60 px;
+    border: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+    
+}
+

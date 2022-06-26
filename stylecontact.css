@@ -1,0 +1,463 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+  }
+
+.section{
+    margin-bottom: 120px;
+}
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 2fr));
+  grid-gap: 30px;
+  grid-auto-flow: row dense;
+  align-items: center;
+  }
+
+
+.wrapperform{
+    
+    padding:35px;
+    background-color: transparent;
+background-image: linear-gradient(260deg, #0C6AE363 16%, #F229A4 81%);
+border-radius:20px;
+box-shadow: -18px 0px 93px 7px rgba(255, 0.6063179347826025, 236.50806794770492, 0.5);
+transition: border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+  .title{
+color: rgba(243, 243, 243, 0.455);
+font-family: 'Russo One', sans-serif;
+font-weight: 600;
+    display: block;
+    font-size: 2.6em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+}
+
+span{
+    display: block;
+}
+
+.contact {
+    width: 100%;
+}
+
+.input-data label{
+display: block;
+font-family: 'Poppins', sans-serif;
+color: white;
+
+}
+
+.js-tilt-glare{
+    border-radius: 20px;
+}
+
+.input-data textarea{
+    width: 100%;
+}
+
+.input-data input{
+    width: 100%;
+    flex-basis:100%;
+}
+
+.submit input {
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    margin-left: 15px;
+        color: #111;
+        font-size: 1em;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+ 
+
+.submit input:hover{
+        color: #111;
+        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        box-shadow: 0 0 50px #fdb931, #FEDB37;
+        cursor:pointer;
+    }
+
+
+@media (min-width: 1000px) {
+    .grid { grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    height: auto; 
+    column-gap: 12em;
+    
+}
+
+.wrapperform{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+    
+  }
+
+  @media (max-width: 999px) {
+    .left-column {
+        order:2 
+    }
+    
+  }
+
+  @media (max-width: 999px) {
+    .section {
+        padding: 15px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .js-tilt-glare {
+        display: none;
+    }
+    .wrapperform.style {
+        display: none;
+    }
+    
+  }
+  /* inceput stil nav*/
+ 
+:root
+{
+    --clr: #222327
+}
+.sb{
+    width: 1440px;
+    /* height: 400px; */
+    justify-content: center;
+    display: flex;
+}
+
+body .btmnavmenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+@media only screen and (max-width:330px) {
+    body .btmnavmenu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    }
+    .navigation{
+        transform: scale(0.8);
+    }
+    
+}
+
+
+/* In caz ca nu mai vreau nav bar-ul global
+
+@media only screen and (min-width:420px) {
+   body .btmnavmenu .navigation{
+        display:none;
+    }
+    
+}  */
+
+@media screen and (max-width:1440px){
+    .sb{
+        width:100%;
+        height: auto;
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    .sb{
+        width:100%;
+    }
+    .navigation{
+        transform: scale(0.8);
+        position: fixed;
+        bottom: -10px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation{
+        transform: scale(0.7);
+        position: fixed;
+        bottom: -10px;
+    }
+}
+
+@media (max-width: 500px){
+    .navigation{
+        bottom:-10px;
+    }
+}
+
+@media (min-width: 500px){
+    .navigation{
+        bottom:0;
+    }
+}
+
+
+.navigation
+{
+width: 500px;
+height: 60px;
+display: inherit;
+position:fixed;
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.navigation ul
+{
+    display: flex;
+    padding-right: 55px;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 95px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.navigation ul li a .icon
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li a .share
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+
+.navigation ul li.active a .share
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+  position: absolute; 
+  color: #000000;
+  font: weight 900;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  
+}
+
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator
+{
+    position:absolute;
+    top: -70%;
+    width: 60px;
+    height: 60px;
+    margin-left: 14px;
+    border-radius: 50% ;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 3px solid black;
+transition: 0.5s;
+} 
+
+ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    
+
+}
+
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    
+
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(95px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(95px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(95px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(95px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(95px * 4));
+}
+
+
+
+
+.toggle li
+{
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    list-style: none;
+    transform-origin: 65px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate (0deg);
+    transform: translateX(60px);
+    /* Am adaugat opacity pentru a masca iconitele atunci cand nu sunt activate
+    Opacitate 0 in prima instanta*/
+    opacity: 0;
+    
+
+}
+
+.toggle.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+}
+
+.toggle li a
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+
+}
+
+
+.toggle {
+    transform: translateX(calc(113.5px*4));
+    padding-bottom: 19px;
+    width: 60 px;
+    height: 60 px;
+    border: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+    
+}
+/*final stil nav bar*/
