@@ -16,14 +16,19 @@ html {
     height: auto;
     overflow:hidden;
     margin-top: 100px;
+    padding-bottom: 90px
  }
 
  .title{
-    display: flex;
+    display: block;
     justify-content: center;
     color: white;
     font-family: 'Russo One';
     font-size: 30px;
+ }
+
+ h1{
+    text-align: center;
  }
 
  .ball{
@@ -72,3 +77,346 @@ html {
     -webkit-box-shadow: 2px 2px 15px 2px #EDEBFF; 
 box-shadow: 2px 2px 15px 2px #EDEBFF;
  }
+
+ @media screen and (max-width:320px){
+    h1{ font-size: 20px;   
+    }
+    .wrapperrobot{
+        transform: scale(0.6);
+        margin-top: -60px;
+        margin-bottom: -60px;
+    }
+    .section1{
+        margin-top: 20px;
+    }
+ }
+
+ /* inceput stil nav*/
+ 
+:root
+{
+    --clr: #222327
+}
+.sb{
+    width: 1440px;
+    /* height: 400px; */
+    justify-content: center;
+    display: flex;
+}
+
+body .btmnavmenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+@media only screen and (max-width:330px) {
+    body .btmnavmenu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    }
+    .navigation{
+        transform: scale(0.8);
+    }
+    
+}
+
+
+/* In caz ca nu mai vreau nav bar-ul global
+
+@media only screen and (min-width:420px) {
+   body .btmnavmenu .navigation{
+        display:none;
+    }
+    
+}  */
+
+@media screen and (max-width:1440px){
+    .sb{
+        width:100%;
+        height: auto;
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    .sb{
+        width:100%;
+    }
+    .navigation{
+        transform: scale(0.8);
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation{
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 500px){
+    .navigation{
+        bottom:-10px;
+    }
+}
+
+@media (min-width: 500px){
+    .navigation{
+        bottom:0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation{
+        bottom: -10px;
+    }
+}
+
+
+
+.navigation
+{
+width: 500px;
+height: 60px;
+display: inherit;
+position:fixed;
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.navigation ul
+{
+    display: flex;
+    padding-right: 55px;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 95px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.navigation ul li a .icon
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li a .share
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+
+.navigation ul li.active a .share
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+  position: absolute; 
+  color: #000000;
+  font: weight 900;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  
+}
+
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator
+{
+    position:absolute;
+    top: -70%;
+    width: 60px;
+    height: 60px;
+    margin-left: 14px;
+    border-radius: 50% ;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 3px solid black;
+transition: 0.5s;
+} 
+
+ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    
+
+}
+
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    
+
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(95px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(95px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(95px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(95px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(95px * 4));
+}
+
+
+
+
+.toggle li
+{
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    list-style: none;
+    transform-origin: 65px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate (0deg);
+    transform: translateX(70px);
+    /* Am adaugat opacity pentru a masca iconitele atunci cand nu sunt activate
+    Opacitate 0 in prima instanta*/
+    opacity: 0;
+    
+
+}
+
+.toggle.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+}
+
+.toggle li a
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+
+}
+
+
+.toggle {
+    transform: translateX(calc(113.5px*4));
+    padding-bottom: 19px;
+    width: 60 px;
+    height: 60 px;
+    border: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+    
+}
+/*final stil nav bar*/
