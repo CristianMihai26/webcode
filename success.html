@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesuccess.css">
+    <title>Thank You!</title>
+</head>
+<body>
+    <section class="section1">
+        <div class="maincontainer">
+            <div class="title"><h1>Thank You for Reaching Out!</h1></div>
+        </div>
+        <div class="grid">
+            <div class="left-column">
+                <div class="wrapperrobot">
+                <img class="eye" src="sources/robot.svg" width="300px" height="300px">
+                <img class="ball" src="sources/eyes.svg" width="200px" height="200px">
+            </div>
+            </div>
+            <div class="right-column">
+                <div class="wrappertextbox">
+                    <div class="bgtextbox">
+                        <div class="textbox"><h3>Thank you for your Email!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam minus id, non ex explicabo quis. Iusto facere adipisci iste esse repellat commodi unde dignissimos est illum optio, aliquam explicabo!</p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <script>
+       /* 
+        document.querySelector('body')
+        .addEventListener('mousemove',eyeball);
+        function eyeball(){
+        var ball=document.getElementsByClassName("ball");
+        ball.forEach (function(ball){
+            let x = (ball.getBoundingClientrect().left) +(eye.clientWidth/2);
+            let y = (ball.getBoundingClientrect().top) + (eye.clientHeight/2);
+            let radian = Math.atan2(event.pageX - x, event.pageY - y);
+            let rot = (radian * (180/Math.PI) * -1) + 0;
+            ball.style.transform = "rotate("+ rot +"deg)";
+        })
+       
+       
+        } */
+        var ball=document.getElementsByClassName("ball");
+        document.onmousemove=function(){
+            var x =event.clientX*14/window.innerWidth+"%";
+            var y =event.clientY*14/window.innerHeight+"%";
+            for (var i=0;i<2;i++){
+                ball[i].style.left=x/2;
+                ball[i].style.top=y/2;
+                ball[i].style.transform="translate("+x+","+y+")";
+            }
+        }
+    </script>
+</body>
+</html>
+
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&family=Dancing+Script&family=Russo+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&family=Dancing+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&display=swap');
+</style>

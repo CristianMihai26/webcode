@@ -19,6 +19,11 @@
                 <div class="title">LET'S WORK 
                     <span>TOGETHER</span></div>
                 <form class="contact" action="contact-form-handler.php" method="POST">
+                    <!--Honeypot-->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <input type="hidden" name="_next" value="success.html"> <!--add full url ex: value = "cristianmihai.com/succes.html"-->
+
                     <div class="input-data">
                         <label>Name</label>
                         <input type="text" required>
