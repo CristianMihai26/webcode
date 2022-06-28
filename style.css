@@ -819,7 +819,9 @@ animation: gradient 10s ease infinite;
 
     .post_thumbnail{
         border-radius: 100px 0px 100px 0px;
-        border: 5px solid #17d1eb;
+        background-image: linear-gradient( 90deg, #e8e0e669 0%, #676c7465 100%);
+    -webkit-box-shadow: 2px 2px 15px 2px #edebff;
+    box-shadow: 2px 2px 15px 2px #edebff;
         overflow: hidden;
         margin-bottom: 1.6rem;
     }
@@ -827,6 +829,7 @@ animation: gradient 10s ease infinite;
     .post:hover .post_thumbnail img{
         filter: saturate(0);
         transition: filter 500ms ease;
+        cursor: pointer;
     }
 
     .post__author{
@@ -838,6 +841,7 @@ animation: gradient 10s ease infinite;
     .post__author-avatar {
         width:2.5rem;
         height:2.5rem;
+        height: fit-content;
         border-radius:5px 0 5px 0;
         overflow: hidden;
         border: solid 2px #17d1eb;
@@ -858,4 +862,23 @@ animation: gradient 10s ease infinite;
 
      .featured .post_thumbnail{
         height: fit-content;
+     }
+
+     /* =================================================================POSTS=======================================*/
+
+     .wrapperposts{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:5rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+     }
+
+     /*==================================================FOOTER=================*/
+
+     .footerwrapper h3{
+        color: grey;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 150px;
      }
