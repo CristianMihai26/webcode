@@ -826,7 +826,10 @@ animation: gradient 10s ease infinite;
         margin-bottom: 1.6rem;
     }
 
-    .post:hover .post_thumbnail img{
+    .post_thumbnail:hover{
+        cursor: pointer;
+    }
+    .post .post_thumbnail:hover img{
         filter: saturate(0);
         transition: filter 500ms ease;
         cursor: pointer;
@@ -882,3 +885,74 @@ animation: gradient 10s ease infinite;
     text-align: center;
     margin-bottom: 150px;
      }
+
+     /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
+
+     @media  screen and (max-width:1024px){
+        .wrapperfeatured{
+            width: 88%;
+            gap: 3rem;
+        }
+        .wrapperposts{
+            width: 88%;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+       .featured h2 {
+            font-size: 1.6rem;
+        }
+       .featured h1 {
+            font-size: 1.8rem;
+        }
+       .featured h3{
+            font-size: 1.2rem;
+        }
+       .featured h5{
+            font-size: 0.8rem;
+        }
+/*=========================HERO BUTTONS CTA===================*/
+        .s1 nav{
+            top:19px;
+        }
+     }
+
+
+/*================================================= BLOG MEDIA QUERIES (SMALL DEVICES)=============*/
+
+@media screen and (max-width:600px) {
+    .wrapperfeatured{
+        grid-template-columns: 1fr;
+        gap: 0;}
+    .featured{
+        margin-left: 20px;
+        margin-right: 20px;
+    }    
+    .wrapperposts .category__button{
+        font-size: 0.5rem;
+    }
+    
+    .wrapperposts{
+        gap:3rem;
+    }
+
+    .s1 .contact{
+        padding-bottom: 20px;
+    }
+
+   .posts .post__author{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    
+   .wrapperposts{
+        grid-template-columns: 1fr;
+    }
+
+    .posts .post__author{
+        display: block;
+    }
+
+}
