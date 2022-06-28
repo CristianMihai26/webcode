@@ -1,4 +1,8 @@
 
+*{
+    list-style: none;
+    text-decoration: none;
+}
 
 html, body{
     padding: 0;
@@ -282,7 +286,9 @@ box-shadow: 2px 2px 15px 2px #EDEBFF;
         font-size: 100%;
         padding-bottom: 15px;
     }}
-/* inceput stil nav*/
+
+
+/* inceput stil lowermenu*/
  
 :root
 {
@@ -611,3 +617,138 @@ border: 1px solid black;
     
 }
 /*final stil nav bar*/
+
+/*header nav*/
+
+img.logo{
+    height: 60px;
+}
+
+img.avatar1{
+    height: 60px;
+}
+
+.headermenuwrapper{
+    font-family: 'Barlow';
+    background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+margin-inline:auto;
+box-shadow: 0 1rem 1rem rgb(0 5 19);
+height: 4.5rem;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+.corp{
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 16px;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    z-index:5;
+    height: 100%;
+}
+
+a{
+    color:white;
+    transition:all 300ms ease;
+}
+
+img{
+    display: block;
+    object-fit: cover;
+}
+
+.headermenuwrapper{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.avatar {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid black;
+    aspect-ratio: 1/1;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.headermenu_profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.headermenu_profile ul{
+    position: absolute;
+    top: 106%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease ;
+}
+
+/*show headermenu ul when headermenu is hovered*/
+
+.headermenu_profile:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.headermenu_profile ul li a{
+    padding: 1rem;
+display: block;
+width: 100%;
+border: solid white;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+background-size: 200% 200%;
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+}
+
+.headermenu_profile ul li:last-child a{
+    /* Created with https://www.css-gradient.com */
+    background: #010101;
+    background: -webkit-radial-gradient(top right, #010101, #E9090C);
+    background: -moz-radial-gradient(top right, #010101, #E9090C);
+    background: radial-gradient(to bottom left, #010101, #E9090C);
+    color: #ffffff;
+    border-radius: 0px 0px 15px 15px;
+    border: solid white;
+}
+
+/*making the header responsive */
+
