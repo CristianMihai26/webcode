@@ -664,13 +664,11 @@ height: 4.5rem;
 
 .corp{
     line-height: 1.6;
-    overflow-x: hidden;
     font-size: 16px;
     width: 100vw;
     position: fixed;
     top:0;
     z-index:5;
-    height: 100%;
 }
 
 a{
@@ -681,6 +679,7 @@ a{
 img{
     display: block;
     object-fit: cover;
+    width: 100%;
 }
 
 .headermenuwrapper{
@@ -717,7 +716,6 @@ img{
     right: 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 3rem 3rem rgba(0,0,0,0.4);
     visibility: hidden;
     opacity: 0;
     transition: all 300ms ease ;
@@ -790,5 +788,74 @@ animation: gradient 10s ease infinite;
         color: white;
     }
 
-    /* =================================================================CATEGORY BUTTON =======================================*/
+    h5{
+        color:white;
+    }
 
+    small{
+        color: white;
+    }
+    /* =================================================================GENERAL CATEGORY BUTTON =======================================*/
+
+    .category__button{
+        background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+        background-size: 200% 200%;
+        -webkit-animation: gradient 10s ease infinite;
+        -moz-animation: gradient 10s ease infinite;
+        animation: gradient 10s ease infinite;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-align: center;
+        color: white;
+        }
+
+    .category__button:hover {
+        color: #fad428;
+    }
+
+    /* =================================================================GENERAL POST STYLES =======================================*/
+
+    .post_thumbnail{
+        border-radius: 100px 0px 100px 0px;
+        border: 5px solid #17d1eb;
+        overflow: hidden;
+        margin-bottom: 1.6rem;
+    }
+
+    .post:hover .post_thumbnail img{
+        filter: saturate(0);
+        transition: filter 500ms ease;
+    }
+
+    .post__author{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+
+    .post__author-avatar {
+        width:2.5rem;
+        height:2.5rem;
+        border-radius:5px 0 5px 0;
+        overflow: hidden;
+        border: solid 2px #17d1eb;
+    }
+    
+    .post__author-info {
+        margin-top: -10px;
+        line-height: 1px;
+    }
+
+     /* =================================================================FEATURED=======================================*/
+
+     .wrapperfeatured{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+     }
+
+     .featured .post_thumbnail{
+        height: fit-content;
+     }
