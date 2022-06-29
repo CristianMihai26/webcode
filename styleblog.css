@@ -1,296 +1,15 @@
-
 *{
-    list-style: none;
     text-decoration: none;
 }
 
-html, body{
-    padding: 0;
-    margin: 0;
+ul{
+    list-style-type: none;
 }
 
 body{
     background-color: #000000;
+    margin: 0;
 }
-
-html {
-    scroll-behavior: smooth;
-  }
-
-.s1{
-    background-color: black;
-}
-
-.hero{
-    width: 1440px;
-    margin: 0 auto;
-}
-
-
-.section1 {
-    width:100%;
-    height: auto;
-    overflow:hidden;
- }
- 
- video{
-    max-width: 100%;
-    border-radius: 30px;
-}
-
-.section2{
-    color: #FFFFFF;  
-    padding-bottom: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-
-}
-
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    position: relative;
-    top: -140px;
-    width: 100%;
-    height: auto;
-    font-family:'Russo One';
-}
-
-@media screen and (max-width:800px){
-    nav{
-        top: -60px;
-    }
-}
-
-@media screen and (max-width:400px){
-    nav{
-        top: 0;
-    }
-}
-
-a.projects{
-    background: linear-gradient(270deg, #17d2eb5a, #ba3ee357);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-a.projects:hover {
-    color: #111;
-        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-        box-shadow: 0 0 50px #fdb931, #FEDB37;
-        border: #000000;
-        border-style:solid;
-        border-width:2px;
-        
-}
-
-a.email{
-    background: linear-gradient(270deg, #17d2eb5a, #ba3ee357);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
-    0 0 40px #a40bca, 0 0 50px #9a0bca;
-  -webkit-animation: blink 0.7s infinite alternate;
-  animation: blink 0.7s infinite alternate;
-}
-
-nav .contact{
-    margin-top:10px;
-}
-
-@-webkit-keyframes blink {
-    100% {
-      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
-        0 0 60px #0ba9ca, 0 0 80px #0ba9ca;
-    }
-  }
-  
-  @keyframes blink {
-    100% {
-      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
-        0 0 60px #0ba9ca, 0 0 80px #0ba9ca;
-    }
-  }
-
-a.email:hover {
-    color: #111;
-        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-        box-shadow: 0 0 50px #fdb931, #FEDB37;
-        border: #000000;
-        border-style:solid;
-        border-width:2px;    
-}
-
-a.about{
-    background: linear-gradient(270deg, #17d2eb5a, #ba3ee357);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-span{
-    color:white;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-a.about:hover {
-    color: #111;
-        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-        box-shadow: 0 0 50px #fdb931, #FEDB37;
-        border: #000000;
-        border-style:solid;
-        border-width:2px;
-}
-
-.nav .title{
-    font-family: 'Dancing Script', cursive;
-    font-size: 300%;
-}
-
-.nav .description{
-    margin-top: -50px;
-    text-decoration: underline;
-    color:#717171
-}
-
-.gridcontainer{
-    background-color: transparent;
-    background-image: linear-gradient(90deg, #F641D6 0%, #4182F6 100%);
-    padding:20px;
-    padding: 8px;
-    border-radius: 20px;
-    font-size:20px;
-}
-.grid1{
-    display: grid;
-    grid:auto /200px 1fr;
-    grid-gap: 0 2em;
-    margin-bottom: 20px;
-    transition: 0.3s, border-radius 0.3s, opacity 0.3s;
-    backdrop-filter: blur (5px);
-    background-image: linear-gradient(90deg, #e8e0e669 0%, #676c7465 100%);
-    padding:20px;
-    border-radius:20px;
-    -webkit-box-shadow: 2px 2px 15px 2px #EDEBFF; 
-box-shadow: 2px 2px 15px 2px #EDEBFF;
-}
-
-.grid2{
-    display: grid;
-    grid-template-columns: auto 200px;
-    grid-gap: 0 2em;
-    margin-bottom: 20px;
-    transition: 0.3s, border-radius 0.3s, opacity 0.3s;
-    backdrop-filter: blur (5px);
-    background-image: linear-gradient(90deg, #e8e0e669 0%, #676c7465 100%);
-    padding:20px;
-    border-radius:20px;
-    -webkit-box-shadow: 2px 2px 15px 2px #EDEBFF; 
-box-shadow: 2px 2px 15px 2px #EDEBFF;
-}
-
-
-.skills {
-    text-align: center;
-        align-self: start;
-        position: sticky;
-        top: 0;
-}
-
-.left-column{
-    align-self: start;
-        position: sticky;
-        top: 0;
-        text-align: center;
-}
-
-
-@media screen and (max-width:1440px){
-    .main-container{
-        width:100%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width:800px){
-    .grid1{
-    display: flex;
-    grid:auto /200px 1fr;
-    grid-gap: 0 2em;
-    }
-}
-
-@media screen and (max-width:800px){
-    .grid2{
-        display: flex;
-        grid:auto /200px 1fr;
-        grid-gap: 0 2em;
-    }
-}
-
-@media screen and (max-width:796px){
-    .nav .title{
-        font-size: 200%;
-        padding-bottom: 1px;
-    }
-}
-
-@media screen and (max-width:597px){
-    .nav .title{
-        font-size: 170%;
-        padding-bottom: 1px;
-    }
-    .nav .description{
-        font-size: 80%;
-    }
-}
-
-@media screen and (max-width:540px){
-    .nav .title{
-        font-size: 140%;
-        padding-bottom: 1px;
-    }
-    .nav .description{
-        font-size: 80%;
-    }
-}
-
-@media screen and (max-width:480px){
-    .nav .title{
-        font-size: 120%;
-        padding-bottom: 15px;
-    }
-    .nav .description{
-        font-size: 68%;
-    }
-    .section2{
-        padding-bottom: 100px;
-        margin-left: 15px;
-        margin-right: 15px;
-}
-.gridcontainer{
-    padding: 14px;
-}
-}
-
-@media screen and (max-width:330px){
-    .nav .title{
-        font-size: 100%;
-        padding-bottom: 15px;
-    }}
-
 
 /* inceput stil lowermenu*/
  
@@ -776,25 +495,6 @@ animation: gradient 10s ease infinite;
     }
     }
 
-    /* =================================================================FEATURED =======================================*/
-
-    .featured{
-        padding-bottom: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    }
-
-    p{
-        color: white;
-    }
-
-    h5{
-        color:white;
-    }
-
-    small{
-        color: white;
-    }
     /* =================================================================GENERAL CATEGORY BUTTON =======================================*/
 
     .category__button{
@@ -855,26 +555,26 @@ animation: gradient 10s ease infinite;
         line-height: 1px;
     }
 
-     /* =================================================================FEATURED=======================================*/
-
-     .wrapperfeatured{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-     }
-
-     .featured .post_thumbnail{
-        height: fit-content;
-     }
-
      /* =================================================================POSTS=======================================*/
-
+.posts{
+    margin-top: 130px;
+}
      .wrapperposts{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:5rem;
         margin-top: 50px;
         margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .post__body{
+        color: #edebff;
+     }
+
+     .post__author{
+        color: white;
      }
 
      /*==================================================FOOTER=================*/
@@ -887,7 +587,12 @@ animation: gradient 10s ease infinite;
      }
 
      /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
-
+@media  screen and (min-width:850px) {
+    .posts{
+        margin-left: 50px;
+    margin-right: 50px;
+    }
+}
      @media  screen and (max-width:1024px){
         .wrapperfeatured{
             width: 88%;
@@ -924,7 +629,7 @@ animation: gradient 10s ease infinite;
         grid-template-columns: 1fr;
         gap: 0;}
     .featured{
-        margin-left: 35px;
+        margin-left: 20px;
         margin-right: 20px;
     }    
     .wrapperposts .category__button{
@@ -933,6 +638,7 @@ animation: gradient 10s ease infinite;
     
     .wrapperposts{
         gap:3rem;
+        margin-left: 20px;
     }
 
     .s1 .contact{
