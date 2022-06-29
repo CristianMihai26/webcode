@@ -589,7 +589,7 @@ animation: gradient 10s ease infinite;
 /*================================SEARCH BAR===================*/
 
 .search__bar{
-    margin-top: 7rem;
+    margin-top: -4rem;
 }
 
 .searchicon{
@@ -719,6 +719,9 @@ border: 1px solid black;
     }
     .search__bar input{
         width: 80%;
+    }
+    .search__bar{
+        margin-top: -1rem;
     }
 }
 
