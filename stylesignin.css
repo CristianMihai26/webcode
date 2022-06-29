@@ -69,6 +69,7 @@ html {
      }
 
      .container.form__section{
+        width: 80%;
         padding: 20px;
         border-radius: 20px;
         background: linear-gradient(270deg, #17d1eb, #bb3ee3);
