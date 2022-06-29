@@ -557,7 +557,7 @@ animation: gradient 10s ease infinite;
 
      /* =================================================================POSTS=======================================*/
 .posts{
-    margin-top: 130px;
+    margin-top: 60px;
 }
      .wrapperposts{
         display: grid;
@@ -586,13 +586,101 @@ animation: gradient 10s ease infinite;
     margin-bottom: 150px;
      }
 
-     /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
-@media  screen and (min-width:850px) {
+/*================================SEARCH BAR===================*/
+
+.search__bar{
+    margin-top: 7rem;
+}
+
+.searchicon{
+    color: white;
+}
+
+.search__bar-container{
+    position:relative;
+    display: flex;
+   /* background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+    -webkit-animation: gradient 10s ease infinite;
+    -moz-animation: gradient 10s ease infinite;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;    */
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left:200px;
+    margin-right:200px;
+    background-image: linear-gradient( 90deg, #e8e0e669 0%, #676c7465 100%);
+    -webkit-box-shadow: 2px 2px 15px 2px #edebff;
+    box-shadow: 2px 2px 15px 2px #edebff;
+    
+}
+
+.search__bar-container >div{
+   align-items: center;
+display: flex;
+width: 100%;
+}
+
+.search__bar input{
+    background: transparent;
+    margin-left:0.7rem;
+padding: 0.5rem 0;
+width: 94%;
+border:none;
+color:white;
+}
+
+.search__bar input::placeholder{
+    color: white;
+}
+
+
+/*================================BUTTON STYLE===================*/
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding:0.6rem 1.2rem;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+}
+
+.btn:hover {
+    display: inline-block;
+    width: fit-content;
+    padding:0.6rem 1.2rem;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #edebff;
+
+}
+
+   /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
+   @media  screen and (min-width:850px) {
     .posts{
         margin-left: 50px;
     margin-right: 50px;
     }
 }
+
+@media  screen and (min-width:768px) {
+    .posts{
+        margin-left: 100px;
+    margin-right: 50px;
+    }
+}
+
      @media  screen and (max-width:1024px){
         .wrapperfeatured{
             width: 88%;
@@ -623,6 +711,16 @@ animation: gradient 10s ease infinite;
 
 
 /*================================================= BLOG MEDIA QUERIES (SMALL DEVICES)=============*/
+@media  screen and (max-width:600px) {
+    .search__bar-container{
+        margin-top: 100px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+    .search__bar input{
+        width: 80%;
+    }
+}
 
 @media screen and (max-width:600px) {
     .wrapperfeatured{
@@ -662,3 +760,6 @@ animation: gradient 10s ease infinite;
     }
 
 }
+
+
+
