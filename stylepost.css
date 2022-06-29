@@ -1,0 +1,681 @@
+*{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    background-color: #000000;
+    margin: 0;
+}
+
+/* inceput stil lowermenu*/
+ 
+:root
+{
+    --clr: #222327
+}
+.sb{
+    width: 1440px;
+    /* height: 400px; */
+    justify-content: center;
+    display: flex;
+}
+
+body .btmnavmenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+@media only screen and (max-width:330px) {
+    body .btmnavmenu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    }
+    .navigation{
+        transform: scale(0.8);
+    }
+    
+}
+
+
+/* In caz ca nu mai vreau nav bar-ul global
+
+@media only screen and (min-width:420px) {
+   body .btmnavmenu .navigation{
+        display:none;
+    }
+    
+}  */
+
+@media screen and (max-width:1440px){
+    .sb{
+        width:100%;
+        height: auto;
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    .sb{
+        width:100%;
+    }
+    .navigation{
+        transform: scale(0.8);
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation{
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 500px){
+    .navigation{
+        bottom:-10px;
+    }
+}
+
+@media (min-width: 500px){
+    .navigation{
+        bottom:0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation{
+        bottom: -10px;
+    }
+}
+
+
+
+.navigation
+{
+width: 500px;
+height: 60px;
+display: inherit;
+position:fixed;
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.navigation ul
+{
+    display: flex;
+    padding-right: 55px;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 95px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.navigation ul li a .icon
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li a .share
+{       
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5 em;
+    text-align: center;
+    transition: 0.5s;
+    color: #000000;
+   
+}
+
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+
+.navigation ul li.active a .share
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+  position: absolute; 
+  color: #000000;
+  font: weight 900;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  
+}
+
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator
+{
+    position:absolute;
+    top: -70%;
+    width: 60px;
+    height: 60px;
+    margin-left: 14px;
+    border-radius: 50% ;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 3px solid black;
+transition: 0.5s;
+} 
+
+ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    
+
+}
+
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height:20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    
+
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(95px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(95px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(95px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(95px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(95px * 4));
+}
+
+
+
+
+.toggle li
+{
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    list-style: none;
+    transform-origin: 65px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate (0deg);
+    transform: translateX(70px);
+    /* Am adaugat opacity pentru a masca iconitele atunci cand nu sunt activate
+    Opacitate 0 in prima instanta*/
+    opacity: 0;
+    
+
+}
+
+.toggle.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+}
+
+.toggle li a
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+
+}
+
+
+.toggle {
+    transform: translateX(calc(113.5px*4));
+    padding-bottom: 19px;
+    width: 60 px;
+    height: 60 px;
+    border: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+    
+}
+/*final stil nav bar*/
+
+/*header nav*/
+
+img.logo{
+    height: 60px;
+}
+
+img.avatar1{
+    height: 60px;
+}
+
+.headermenuwrapper{
+    font-family: 'Barlow';
+    background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+margin-inline:auto;
+box-shadow: 0 1rem 1rem rgb(0 5 19);
+height: 4.5rem;
+
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+.corp{
+    line-height: 1.6;
+    font-size: 16px;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    z-index:5;
+}
+
+a{
+    color:white;
+    transition:all 300ms ease;
+}
+
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.headermenuwrapper{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.avatar {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid black;
+    aspect-ratio: 1/1;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.headermenu_profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.headermenu_profile ul{
+    position: absolute;
+    top: 106%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease ;
+}
+
+/*show headermenu ul when headermenu is hovered*/
+
+.headermenu_profile:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.headermenu_profile ul li a{
+    padding: 1rem;
+display: block;
+width: 100%;
+border: solid white;
+background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+background-size: 200% 200%;
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+}
+
+.headermenu_profile ul li:last-child a{
+    /* Created with https://www.css-gradient.com */
+    background: #010101;
+    background: -webkit-radial-gradient(top right, #010101, #E9090C);
+    background: -moz-radial-gradient(top right, #010101, #E9090C);
+    background: radial-gradient(to bottom left, #010101, #E9090C);
+    color: #ffffff;
+    border-radius: 0px 0px 15px 15px;
+    border: solid white;
+}
+
+/*making the header responsive */
+/*=====================================================MOBILE=================================================*/
+@media screen and (max-width:450px){
+    .headermenuwrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50px;
+        }
+    img.logo{
+        height: 35px;
+    }
+    img.avatar1{
+        height: 35px;
+    }
+    .avatar{
+        width: 30px;
+    height: 30px;
+    border: 0.1rem solid black;
+    }
+    .items{
+        gap:1rem;
+    }
+    }
+
+    /* =================================================================GENERAL CATEGORY BUTTON =======================================*/
+
+    .category__button{
+        background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+        background-size: 200% 200%;
+        -webkit-animation: gradient 10s ease infinite;
+        -moz-animation: gradient 10s ease infinite;
+        animation: gradient 10s ease infinite;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-align: center;
+        color: white;
+        }
+
+    .category__button:hover {
+        color: #fad428;
+    }
+
+    /* =================================================================GENERAL POST STYLES =======================================*/
+
+    .post_thumbnail{
+        border-radius: 100px 0px 100px 0px;
+        background-image: linear-gradient( 90deg, #e8e0e669 0%, #676c7465 100%);
+    -webkit-box-shadow: 2px 2px 15px 2px #edebff;
+    box-shadow: 2px 2px 15px 2px #edebff;
+        overflow: hidden;
+        margin-bottom: 1.6rem;
+    }
+
+    .post_thumbnail:hover{
+        cursor: pointer;
+    }
+    .post .post_thumbnail:hover img{
+        filter: saturate(0);
+        transition: filter 500ms ease;
+        cursor: pointer;
+    }
+
+    .post__author{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+
+    .post__author-avatar {
+        width:2.5rem;
+        height:2.5rem;
+        height: fit-content;
+        border-radius:5px 0 5px 0;
+        overflow: hidden;
+        border: solid 2px #17d1eb;
+    }
+    
+    .post__author-info {
+        margin-top: -10px;
+        line-height: 1px;
+        color: #edebff;
+    }
+
+     /* =================================================================POSTS=======================================*/
+
+     .post__body{
+        color: #edebff;
+     }
+
+     .post__author{
+        color: white;
+     }
+
+     /*==================================================FOOTER=================*/
+
+     .footerwrapper h3{
+        color: grey;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 150px;
+     }
+
+   /* 
+    background-image: linear-gradient( 90deg, #e8e0e669 0%, #676c7465 100%);
+    -webkit-box-shadow: 2px 2px 15px 2px #edebff;
+    box-shadow: 2px 2px 15px 2px #edebff;
+    */
+
+
+
+/*================================BUTTON STYLE===================*/
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding:0.6rem 1.2rem;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+}
+
+.btn:hover {
+    display: inline-block;
+    width: fit-content;
+    padding:0.6rem 1.2rem;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #edebff;
+
+}
+
+
+
+   /*================================================= Single Post=============*/
+   p{
+    color: #edebff;
+   }
+
+   h2{
+    color: white;
+   }
+   .singlepost__container{
+    margin-top: 100px;
+   }
+
+   .singlepost{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    margin-top: 140px;
+}
+
+.post__author{
+    margin-bottom: 10px;
+}
+
+.singlepost__thumbnail{
+    border-radius: 60px;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 2px 15px 2px #edebff;
+    box-shadow: 2px 2px 15px 2px #edebff;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+   /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
+   @media  screen and (min-width:700px) and (max-width:900px) {
+    .singlepost{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-bottom: 100px;
+        margin-top: 140px;
+    }
+   }
+
+
+
+
+/*================================================= BLOG MEDIA QUERIES (SMALL DEVICES)=============*/
+
+
+@media  screen and (max-width:700px){
+    .singlepost{
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-bottom: 100px;
+        margin-top: 140px;
+    }
+   }
+
+@media  screen and (max-width:450px){
+    .singlepost{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 100px;
+        margin-top: 140px;
+    }
+   }
+
