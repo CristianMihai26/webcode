@@ -595,31 +595,10 @@ animation: gradient 10s ease infinite;
 
      /*================================================= BLOG MEDIA QUERIES (MEDIUM DEVICES)=============*/
 
-     @media  screen and (max-width:1024px){
-        .wrapperfeatured{
-            width: 88%;
-            gap: 3rem;
-        }
-        .wrapperposts{
-            width: 88%;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-       .featured h2 {
-            font-size: 1.6rem;
-        }
-       .featured h1 {
-            font-size: 1.8rem;
-        }
-       .featured h3{
-            font-size: 1.2rem;
-        }
-       .featured h5{
-            font-size: 0.8rem;
-        }
-/*=========================HERO BUTTONS CTA===================*/
-        .s1 nav{
-            top:19px;
+     @media  screen and (min-width:750px){
+       .posts{
+        margin-left: 20px;
+        margin-right: 20px;
         }
      }
 
@@ -630,19 +609,36 @@ animation: gradient 10s ease infinite;
      .post__author{
         color: #edebff;
      }
+
+     /*===============================LAYOUT================*/
+
+     .category__title{
+        margin-top: 290px;
+        color: white;
+        text-align: center;
+        font-family: 'Russo One';
+        font-size: 200%;
+        backdrop-filter: blur (5px);
+        background-image: linear-gradient(90deg, #e8e0e669 0%, #676c7465 100%);
+        padding:20px;
+        border-radius:20px;
+        -webkit-box-shadow: 2px 2px 15px 2px #EDEBFF; 
+    box-shadow: 2px 2px 15px 2px #EDEBFF;
+    }
+
+    .posts{
+        margin-top: 100px;
+    }
 /*================================================= BLOG MEDIA QUERIES (SMALL DEVICES)=============*/
 
 @media screen and (max-width:600px) {
-    .wrapperfeatured{
+   .wrapperposts{
         grid-template-columns: 1fr;
-        gap: 0;}
-    .featured{
-        margin-left: 35px;
-        margin-right: 20px;
-    }    
-    .wrapperposts .category__button{
-        font-size: 0.5rem;
-    }
+        gap: 0;
+    margin-left: 20px;
+margin-right: 20px;
+}
+
     
     .wrapperposts{
         gap:3rem;
@@ -669,3 +665,21 @@ animation: gradient 10s ease infinite;
     }
 
 }
+
+@media screen and (max-width:400px) {
+
+.category__title{
+    margin-top: 150px;
+    font-size: 120%;
+}
+
+}
+
+@media screen and (min-width:400px) {
+
+    .category__title{
+        margin-top: 150px;
+        font-size: 120%;
+    }
+    
+    }
