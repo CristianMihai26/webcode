@@ -39,12 +39,16 @@
                     <option value="2">Personal Development</option>
                     <option value="3">How To</option>
                 </select>
+                <textarea rows="10" placeholder="Body"></textarea>
                 <div class="form__control">
                     <input type="checkbox" checked id="is_featured">
                     <label for="is_featured">Featured</label>
                 </div>
-                <textarea rows="4" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Post</button>
+               <div class="form__control">
+                <label for="thumbnail">Add Thumbnail</label>
+                <input type="file" id="thumbnail">
+               </div>
+                <button type="submit" class="btn">Add Post</button>
             </form>
         </div>
     </section>    
