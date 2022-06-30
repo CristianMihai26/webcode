@@ -1128,6 +1128,8 @@ animation: gradient 10s ease infinite;
         display: block;
     }
 
-}section.form__section{
+}
+
+section.form__section{
     margin-top: 100px;
 }
