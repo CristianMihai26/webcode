@@ -111,33 +111,7 @@
             }
         
         </script>
-    <script>
-       /* 
-        document.querySelector('body')
-        .addEventListener('mousemove',eyeball);
-        function eyeball(){
-        var ball=document.getElementsByClassName("ball");
-        ball.forEach (function(ball){
-            let x = (ball.getBoundingClientrect().left) +(eye.clientWidth/2);
-            let y = (ball.getBoundingClientrect().top) + (eye.clientHeight/2);
-            let radian = Math.atan2(event.pageX - x, event.pageY - y);
-            let rot = (radian * (180/Math.PI) * -1) + 0;
-            ball.style.transform = "rotate("+ rot +"deg)";
-        })
-       
-       
-        } */
-        var ball=document.getElementsByClassName("ball");
-        document.onmousemove=function(){
-            var x =event.clientX*14/window.innerWidth+"%";
-            var y =event.clientY*14/window.innerHeight+"%";
-            for (var i=0;i<2;i++){
-                ball[i].style.left=x/2;
-                ball[i].style.top=y/2;
-                ball[i].style.transform="translate("+x+","+y+")";
-            }
-        }
-    </script>
+    <script src="success.js"></script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
