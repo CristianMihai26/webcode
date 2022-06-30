@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleaddpost.css">
+    <title>CristianMihai - Add Post</title>
+</head>
+<body>
+      <!--================================HEADER NAV MENU============================-->
+      <navhead class="corp">
+        <div class="headermenuwrapper">
+            <a href="index.html"><img class="logo" src="sources/logo.webp"></a>
+            <ul class="items">
+                <li><a href="signin.html">Sign In</a></li>
+                <li class="headermenu_profile">
+                    <div class="avatar">
+                        <img class="avatar1" src="sources/avatar1.jpg">
+                        </div>
+                        <ul>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="logout.html">LogOut</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+    </navhead>
+    <section class="form__section">
+        <div class="container form__section container">
+            <h2>Edit Post</h2>
+            <form action="" enctype="multipart/form-data">
+                <input type="text" placeholder="Title">
+                <select>
+                    <option value="1">Dev Journey</option>
+                    <option value="2">Personal Development</option>
+                    <option value="3">How To</option>
+                </select>
+                <textarea rows="10" placeholder="Body"></textarea>
+                <div class="form__control">
+                    <input type="checkbox" checked id="is_featured">
+                    <label for="is_featured">Featured</label>
+                </div>
+               <div class="form__control">
+                <label for="thumbnail">Update Thumbnail</label>
+                <input type="file" id="thumbnail">
+               </div>
+                <button type="submit" class="btn">Update Post</button>
+            </form>
+        </div>
+    </section>    
+    <!--==================================START OF FOOTER==========================================-->
+    <footer>
+        <div class="footerwrapper">
+            <h3>All Rights Reserved @Copyright, Cristian Mihai.<br>Full Project Created and Designed by Cristian Mihai.</h3>
+        </div>
+    </footer>
+    <section class="sb">
+        <div class="navigation">
+            <div class="toggle">
+                <li style="--i:0">
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                </li>
+                <li style="--i:1">
+                    <a href="https://github.com/CristianMihai26"><ion-icon name="logo-github"></ion-icon></a> 
+                </li>
+                <li style="--i:2">
+                    <a href="https://www.linkedin.com/in/mihai-cristian-18373523a/"><ion-icon name="logo-linkedin"></ion-icon></a> 
+                </li>
+                <li style="--i:3">
+                    <a href="contact.html"><ion-icon name="mail-outline"></ion-icon></a> 
+                </li>
+            </div>
+        <ul> 
+            <li class="list active">
+            <a href="index.html">
+                <span class="icon"><ion-icon name="home"></ion-icon></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="services.html">
+                <span class="icon"><ion-icon name="rocket"></ion-icon></span>
+                <span class="text">Services</span>
+            </a>
+        </li>
+        <li class="list ">
+            <a href="about.html">
+                <span class="icon"><ion-icon name="glasses"></ion-icon></span>
+                <span class="text">About</span>
+                </a>
+                <li class="list">
+                    <a href="blog.html">
+                        <span class="icon"><ion-icon name="desktop"></ion-icon></span>
+                        <span class="text">Blog</span></a>
+                        <li class="list">
+                            <a class="buton" href="#/">
+                                <span class="share"><ion-icon name="share-social"></ion-icon></span>
+                                <span class="text">Socials</span>
+                            </a>
+                        </li>
+                    </a>
+                </li>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+    </script>
+    <script>
+    const list = document.querySelectorAll('.list');
+    function activeLink (){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach ((item) =>
+    item.addEventListener ('click',activeLink));
+    </script>
+    <!-- Am inclus .toggle si .share (iconita de la socials)
+        Am creat un toggle "active" state la fiecare declansat de tap o share-->
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let share = document.querySelector('.share');
+       /* am adaugat clasa buton ca avitator pentru toggle 
+       pentru ca avea o dimensiunea mai mare
+       deci puteam apasa oriunde in social block pentru a deschide social icons*/
+        let buton = document.querySelector('.buton');
+        share.onclick = function (){
+           share.classList.toggle('active')
+        };
+        buton.onclick = function (){
+           toggle.classList.toggle('active')
+        }
+    
+    </script>
+
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        
+</body>
+</html>
+
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&family=Dancing+Script&family=Russo+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&family=Dancing+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@600&display=swap');
+    </style>
