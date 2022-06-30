@@ -917,6 +917,114 @@ animation: gradient 10s ease infinite;
      }
 
 
+     /*=========================DASHBOARD===================*/
+
+     .dashboard{
+        margin-top: 100px;
+     }
+
+     .btn{
+        display: inline-block;
+        width: fit-content;
+        padding: 0.3rem 0.7rem;
+        cursor: pointer;
+        background-color: gold;
+        border-radius: 10px;
+        transition: all 300ms ease;
+        font-size: 0.9rem;
+     }
+
+     .btn.danger{
+        background: red;
+     }
+
+     .btn:hover{
+        background: white;
+        color: #000000;
+     }
+
+.dashboard__container{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    color: white;
+    gap:1rem;
+    padding: 2rem;
+    backdrop-filter: blur (5px);
+    background: linear-gradient(270deg, #17d1eb, #bb3ee3);
+-webkit-animation: gradient 10s ease infinite;
+-moz-animation: gradient 10s ease infinite;
+animation: gradient 10s ease infinite;
+background-size: 200% 200%;
+border-radius: 20px;
+margin-left: 100px;
+margin-right: 100px;
+}
+
+.dashboard aside{
+    display: flex;
+    backdrop-filter: blur (5px);
+    background-image: linear-gradient(90deg, #e8e0e669 0%, #676c7465 100%);
+    border-radius:20px;
+    align-items: center;
+    gap:1rem;
+
+}
+
+.dashboard aside ul li:not(:last-child){
+ border-bottom: 1.5px solid black;
+
+}
+
+aside a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.dashboard h2{
+    font-family: 'Russo One';
+}
+
+.dashboard aside a:hover{
+    background: rgba(6, 163, 221, 0.325);
+}
+
+.dashboard aside a.active{
+    background: rgba(255, 255, 255, 0.354);
+}
+
+.dashboard main{
+    margin-left: 1.5rem;
+}
+
+.dashboard main h2{
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.dashboard main table{
+    width: 100%;
+    text-align: left;
+}
+
+.dashboard main table th{
+    background: rgba(245, 245, 245, 0.266);
+    padding: 0.8rem;
+    color: black;
+    border-radius: 10px;
+}
+
+.dashboard main table td{
+    border-bottom: 1px solid black;
+    padding: 0.8rem;
+}
+
+.dashboard main table tr:hover td{
+    background-color: #042b6e;
+    transition: all 300ms ease;
+}
+
 /*================================================= BLOG MEDIA QUERIES (SMALL DEVICES)=============*/
 
 @media screen and (max-width:600px) {
@@ -956,3 +1064,105 @@ animation: gradient 10s ease infinite;
     }
 
 }
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+
+    .dashboard{
+        margin-top: 300px;
+    }
+
+.dashboard__container{
+    grid-template-columns: 4.3rem auto;
+    padding: 0;
+}
+
+.dashboard aside{
+gap:1rem;
+background: none;
+}
+
+.dashboard aside ul li a{
+    line-height: 40px;
+    display: block;
+    }
+
+.dashboard aside h5{
+display: none;
+}
+
+.dashboard aside a:hover{
+    background: rgba(6, 164, 221, 0);
+}
+
+.dashboard aside a.active{
+    background: rgba(255, 255, 255, 0);
+}
+
+.dashboard main table thead{
+    display: none;
+}
+
+
+.dashboard aside ul li:not(:last-child) {
+   border-bottom:none;
+}}
+
+@media screen and (max-width: 600px){
+    .dashboard main table tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container.dashboard__container{
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+.dashboard{
+    margin-top: 150px;
+}
+
+.dashboard__container{
+grid-template-columns: 4.3rem auto;
+padding: 0;
+}
+
+.dashboard aside{
+gap:1rem;
+background: none;
+}
+
+.dashboard aside ul li a{
+line-height: 40px;
+display: block;
+}
+
+.dashboard aside h5{
+display: none;
+}
+
+.dashboard aside a:hover{
+background: rgba(6, 164, 221, 0);
+}
+
+.dashboard aside a.active{
+background: rgba(255, 255, 255, 0);
+}
+
+.dashboard main table thead{
+display: none;
+}
+
+.dashboard aside ul li a{
+    line-height: 80px;
+    display: block;
+    }
+
+.dashboard main h2 {
+        margin-bottom: 0rem;
+        line-height: 1;
+    }
+
+.dashboard aside ul li:not(:last-child) {
+border-bottom:none;
+}}
